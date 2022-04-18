@@ -1,0 +1,66 @@
+<!<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Form page</title>
+        <style>
+            .container{
+                width: 40%;
+                border:1px solid black;
+                margin: auto;
+                padding:20px;
+                font-size: 20px;
+            }
+            
+            #myTable table tr td input{
+                font-size: 20px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <h1>My Form</h1>
+            <form id="myTable" action="RegisterServlet" method="post">
+                <table>
+                    <tr>
+                        <td>Enter your name:</td>
+                        <td><input type="text" name="user_name" placeholder="Enter name"></td>
+                    </tr>
+                    <tr>
+                        <td>Enter your password:</td>
+                        <td><input type="password" name="user_password" placeholder="Enter password"></td>
+                    </tr>
+                    <tr>
+                        <td>Enter your email:</td>
+                        <td><input type="email" name="user_email" placeholder="Enter email"></td>
+                    </tr>
+                     <tr>
+                        <td>Select Gender</td>
+                        <td><input type="radio" name="user_gender" value="Male">Male</td>
+                        <td><input type="radio" name="user_gender" value="Female">Female</td>
+                    </tr>
+                    <tr>
+                        <td>Select your course</td>
+                        <td>
+                            <select name="user_course">
+                                <option name="Java">Java</option>
+                                <option name="Python">Python</option>
+                                <option name="C++">C++</option>
+                                <option name="GoLang">GoLang</option>
+                                <option name="Other">Other</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>
+                            <button type="submit">Register</button>
+                            <button type="reset">Reset</button>
+                        </td>
+                    </tr>
+                </table>
+            </form>
+        </div>        
+    </body>
+</html>
+
