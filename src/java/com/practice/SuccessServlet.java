@@ -11,13 +11,14 @@ import javax.servlet.http.HttpServletResponse;
  *
  * @author amanagrawal
  */
-public class SuccessServlet extends HttpServlet{
+public class SuccessServlet extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-     resp.setContentType("text/html");
+        resp.setContentType("text/html");
         PrintWriter out = resp.getWriter();
-        out.println("<h1>Data successfully added</h1>");    
+        String name = (String) req.getAttribute("name");
+        out.println("<h1>Data successfully added by user " + name + "</h1>");
     }
-    
+
 }

@@ -34,15 +34,17 @@ public class RegisterServlet extends HttpServlet {
             out.println("<h2>Email : " + email + "t</h2>");
             out.println("<h2>Gender : " + gender + "</h2>");
             out.println("<h2>Course : " + course + "</h2>");
-            
+
+            //setting the attrubute to pass on values similar to what intent does in android
+            req.setAttribute("name", name);
             // forwarding the data to a different servlet
-            RequestDispatcher rd=req.getRequestDispatcher("success");// url pattern of SuccessServlet
+            RequestDispatcher rd = req.getRequestDispatcher("success");// url pattern of SuccessServlet
             rd.forward(req, resp);
         } else {
             out.println("<h2>Agreement not checked</h2>");
             // include the index.html content using request dispatcher
-            
-            RequestDispatcher rd=req.getRequestDispatcher("index.html");
+
+            RequestDispatcher rd = req.getRequestDispatcher("index.html");
             rd.include(req, resp);
         }
     }
