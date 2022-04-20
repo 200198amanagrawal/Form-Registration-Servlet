@@ -24,16 +24,12 @@ public class SuccessServlet extends HttpServlet {
         getDataFromCookie(resp, req);
     }
 
-    
     private void getDataFromCookie(HttpServletResponse resp, HttpServletRequest req) throws IOException {
         resp.setContentType("text/html");
         PrintWriter out = resp.getWriter();
-        Cookie[] cookies = req.getCookies();
-        for (Cookie c : cookies) {
-            if (c.getName().equals("name")) {
-                out.println("<h1>Data successfully added by user " + c.getValue() + "</h1>");
-            }
-        }
+
+        out.println("<h1>Data successfully added by user " + req.getParameter("name") + "</h1>");
+
     }
 
 }

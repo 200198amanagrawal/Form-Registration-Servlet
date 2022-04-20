@@ -34,10 +34,8 @@ public class RegisterServlet extends HttpServlet {
         out.println("<h2>Gender : " + gender + "</h2>");
         out.println("<h2>Course : " + course + "</h2>");
         
-        out.println("<a href='success'>Go to Servlet 2</a>");
+        out.println("<a href='success?name="+name+"'>Go to Servlet 2</a>");
         
-        Cookie cookie=new Cookie("name",name);
-        resp.addCookie(cookie);
     }
 
 }
